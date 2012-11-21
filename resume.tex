@@ -1,0 +1,159 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
+% (c) 2007 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+% (c) 2009 Derek R. Hildreth <derek@derekhildreth.com> http://www.derekhildreth.com 
+% (c) 2009 Joshua S. Hou <jshou@u.washington.edu>
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\usepackage{verbatim}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancybox}
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black     % can put red here to visualize the links
+}
+\urlstyle{same}
+\definecolor{mygrey}{gray}{.85}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{0.375in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-.375in}
+\addtolength{\textheight}{0.75in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+
+    \newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+
+%\newcommand{\rescontent}[1]{\colorbox{white}{\begin{minipage}{\textwidth}{#1 \vphantom{p\^{E}}}\end{minipage}}}
+
+    \newcommand{\ressubheading}[4]{ % {bold title}{location}{position/degree/GPA}{date}
+        \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+            \textbf{#1} & #2 \\
+                  \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-6pt}}
+
+
+    \newenvironment{section-content}
+    {\begin{Sbox}\begin{minipage}{\textwidth}\vspace{0.04in}}
+        {\end{minipage}\end{Sbox}\colorbox{white}{\TheSbox}\vspace{0.1in}}
+
+        \newenvironment{graybox}
+        {\begin{Sbox}\begin{minipage}{\textwidth}\bfseries}
+            {\end{minipage}\end{Sbox}\colorbox{mygrey}{\TheSbox}}
+%-----------------------------------------------------------
+
+%-----------------------------------------------------------
+%General Resume Tips
+%   No periods!  Technically, nothing in this document is a full sentence.
+%   Use parallelism by ending key words with the same thing,  i.e. "Coordinated; Designed; Communicated".
+%   More tips on bottom of this LaTeX document.
+%-----------------------------------------------------------
+
+            \begin{document}
+            \newcommand{\myheader}{
+                \begin{tabular*}{1.006\textwidth}{l@{\extracolsep{\fill}}r}
+                    \textbf{{\LARGE Andrew M. Hou}}  &\\
+                                 4118 E McGilvra St, Apt 393 &  Tel: 360-481-4454\\
+                                        Seattle, WA 98112 &  Email: \href{mailto:hou.andrew@gmail.com}{hou.andrew@gmail.com} \\
+                \end{tabular*}
+                \\
+            \vspace{0.1in}}
+
+            \myheader
+%%%%%%%%%%%%%%%%%%%%%%
+            \resheading{Experience}
+            \begin{section-content}
+                \ressubheading{Cequint, Inc.}{Seattle, WA}{Software Engineer}{August 2012 - Present}\\
+                    { \footnotesize
+                        \begin{itemize}
+                                \resitem{Developed content-rich mobile messaging system for carriers to reach customers. Implemented in HTML, CSS, JavaScript, and native Android (Java).}
+                        \end{itemize}
+                    }
+
+                \ressubheading{Cequint, Inc.}{Seattle, WA}{Test Engineer}{October 2011 - August 2012}\\
+                    { \footnotesize
+                        \begin{itemize}
+                                \resitem{End to End testing on mobile applications systems. Android applications testing, test-automation, and development of in-house web tooling.}
+                        \end{itemize}
+                    }
+
+                \ressubheading{Department of Bioengineering, University of Washington}{Seattle, WA}{Grader/Teaching Assistant}{March 2011 - June 2011}\\
+                    { \footnotesize
+                        \begin{itemize}
+                                \resitem{Bioengineering Signals and Sensors - Undergraduate course. Grading homework assignments and quizzes. Providing office hours for extra help to students.}
+                        \end{itemize}
+                    }
+
+                \ressubheading{Sage: Open Source Mathematics Software}{Seattle, WA}{Undergraduate Researcher}{Sept. 2009 - March 2010}\\
+                    {\footnotesize
+                        \begin{itemize}
+                                \resitem{Designed and implemented statistics modules in Python-based mathematics software. Developed code and documentation.}
+                        \end{itemize}
+                    }
+
+                \ressubheading{Boy Scouts of America}{Olympia, WA}{Member}{Dec. 2004 - Present}\\
+                    {\footnotesize
+                        \begin{itemize}
+                                \resitem{Eagle Scout, National Eagle Scout Association Academic Scholarship Recipient}
+                                \resitem{Section W-1N 2011 Conclave Vice Chief of Shows. Producer of stage show for Washington/Alaska regional event}
+                                \resitem{Order of the Arrow Shows, BSA National Jamboree 2010. Stage show production for 25,000 participants}
+                                \resitem{Assistant Scoutmaster, Troop 9-266, Pacific Harbors Council}
+                        \end{itemize}
+                    }
+            \end{section-content}  % End Experience list
+
+%%%%%%%%%%%%%%%%%
+            \resheading{Education}
+            \begin{section-content}
+                \ressubheading{\href{http://www.washington.edu}{University of Washington}}{Seattle, WA}{\href{http://depts.washington.edu/lingweb/}{B.A. -- Mathematics}}{Sept 2008 -- August 2011}\\
+                    { \footnotesize
+                        \begin{itemize}
+                                \resitem{Relevant Coursework: Computer Programming for Mathematicians; Data Structures and Algorithms; Computer Programming I, II; Real Analysis; Linear Analysis; Probability and Statistics for Engineers; Discrete Mathematical Models; Introduction to Bioengineering Instrumentation; Bioengineering Signal Processing; Introduction to Synthetic Biology; Computational Bioengineering; Introduction to Technical Writing}
+                        \end{itemize}
+                    }
+            \end{section-content}
+
+%%%%%%%%%%%%%%%%%%%%%%
+            \resheading{Research}
+            \begin{section-content}
+                \ressubheading{{Adenosine Supersensitivity in Coronary Blood Flow Regulation}}{Seattle, WA}{{Bassingthwaighte Lab, Dept. of Bioengineering}}{Jan 2009 -- June 2011}\\
+                { \footnotesize
+                    \begin{itemize}
+                   		\resitem{Computational modeling; program optimization; cardiac microcirculation and auto-regulation}
+                            \resitem{Experimental Biology 2010, Anaheim CA: Poster Presentation, Abstract: 973.14}
+                            \resitem{Mary Gates Undergraduate Research Symposium: Poster Presentation}
+                            \resitem{Web-based tutorials for NSR Physiome Project}
+                    \end{itemize}
+                }
+            \end{section-content}
+%%%%%%%%%%%%%%%%%%%%%%
+            \resheading{Skills}
+            \begin{section-content}
+                \begin{description}
+                    \item[Technology] {\footnotesize JavaScript, HTML, CSS, Java, Android. Basic knowledge of Python and Ruby. Can work natively in UNIX and Windows.}
+                    \item[Communication]{\footnotesize Fluent in Mandarin and English. Excellent communication and analytical skills. }
+                \end{description} % End Skills list
+            \end{section-content}
+%%%%%%%%%%%%%%%%%%%%%%
+
+            \end{document}
